@@ -125,8 +125,9 @@
                         </systemPropertyVariables>
                         <testFailureIgnore>true</testFailureIgnore>
                         <includes>
-                            <include>**/TestNGRunner.java</include>
-                            <include>**/CoupaTestRunner.java</include>
+<!--                            <include>**/TestNGRunner.java</include>-->
+<!--                            <include>**/CoupaTestRunner.java</include>-->
+                            <include>**/**Runner.java</include>
                         </includes>
                         <!--                        <suiteXmlFiles>
 
