@@ -2,6 +2,7 @@
 *.iml
 .idea/
 target/
+reporting/
 # Compiled class file
 *.class
 
