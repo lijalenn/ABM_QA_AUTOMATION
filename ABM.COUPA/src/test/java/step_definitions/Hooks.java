@@ -7,7 +7,6 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilites.for_helper_methods.HelperClass;
-import utilites.reporting.Extent;
 
 public class Hooks {
     @Before
@@ -26,10 +25,6 @@ public class Hooks {
             final byte[] screenshot = ((TakesScreenshot) HelperClass.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());}
     }
-/*    @AfterStep(order = 0)
-    public static void generate(){
-        Extent.makeReport();
-    }*/
 
     @After
     public static void tearDown() {
