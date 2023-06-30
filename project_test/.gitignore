@@ -2,6 +2,7 @@
 *.iml
 .idea/
 target/
+ExtentReports/
 # Compiled class file
 *.class
 
