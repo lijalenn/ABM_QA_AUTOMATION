@@ -5,6 +5,7 @@ import io.cucumber.java.en.*;
 import locators.SalesInquiriesFormLocators;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
 import utilites.for_misl.ExcelReader;
 import utilites.for_helper_methods.HelperClass;
 
@@ -59,6 +60,8 @@ public class SalesInquiriesFormStepDef {
     @Then("I should see {string}")
     public void i_should_see(String string) {
       String actual =  HelperClass.getText(locators.textVerifier);
+      Reporter.log("Expected result should be - " + string);
+      Reporter.log("Actual result is - " + actual);
         Assert.assertTrue(actual.contains(string));
     }
 

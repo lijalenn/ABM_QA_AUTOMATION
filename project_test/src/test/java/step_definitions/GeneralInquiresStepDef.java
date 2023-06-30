@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
 import utilites.for_excel.ExcelConfiguration;
 import utilites.for_excel.ExcelDataReader;
 import utilites.for_excel.IDataReader;
@@ -41,6 +42,8 @@ public class GeneralInquiresStepDef {
     @Then("user should see {string} page")
     public void user_should_see_page(String verifyGenInqPage) {
         String actual = HelperClass.getText(locators.verifyGenInqryResult);
+        Reporter.log("Expected result should be - "+ verifyGenInqPage);
+        Reporter.log("Actual found is  - "+ actual);
         Assert.assertTrue(actual.contains(verifyGenInqPage));
     }
 
@@ -113,7 +116,8 @@ public class GeneralInquiresStepDef {
     public void user_should_see_a_reply(String verifyText) {
         HelperClass.moveToElement(locators.verifyGenInqryPageText);
         String actual = HelperClass.getText(locators.verifyGenInqryPageText);
-
+        Reporter.log("Expected result should be - "+ verifyText);
+        Reporter.log("Actual found is  - "+ actual);
         Assert.assertTrue(actual.equals(verifyText));
 
     }

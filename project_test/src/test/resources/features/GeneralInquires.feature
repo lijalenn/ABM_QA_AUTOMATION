@@ -17,7 +17,7 @@ Feature: Testing ABM Contact page of General Inquiries
   Scenario: Complete "TELL US ABOUT YOU" form after entering mandatory fields using an Excel file
     And user should be able to enter their information
       | File Name            | File Location                                                                                      | Sheet Name |
-      | GenInquiresFile.xlsx |C:\Users\alne7454\IdeaProjects\ABM_QA_AUTOMATION\project_test\files_for_use\GenInquiresFile.xlsx| genInqry   |
+      | GenInquiresFile.xlsx |../project_test/files_for_use/GenInquiresFile.xlsx| genInqry   |
     When user click on Submit button
     Then user should see a reply "Thanks for contacting us! We will get in touch with you shortly."
 

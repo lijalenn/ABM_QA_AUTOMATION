@@ -13,6 +13,7 @@ import io.cucumber.testng.CucumberOptions;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = true,
         tags = "@regression",
+//        tags = "useExcel",
         dryRun = false,
         publish = true
 
